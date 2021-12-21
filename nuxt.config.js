@@ -1,3 +1,5 @@
+const { API_KEY, API_URL } = process.env;
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -48,5 +50,14 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
+  
+  publicRuntimeConfig: {
+    apiUrl: API_URL,
+    apiKey: process.env.NODE_ENV !== 'production' ? API_KEY : undefined
+  },
+  privateRuntimeConfig: {
+    apiKey: API_KEY,
+  },
+
 }
