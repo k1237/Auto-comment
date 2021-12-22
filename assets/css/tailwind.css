@@ -2,7 +2,14 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-.markdown {
-  @apply text-red-300;
+.btn-pink{
+  @apply px-2 py-1 bg-red-400 text-white font-semibold rounded hover:bg-red-500
 }
 
+.btn-blue{
+  @apply px-2 py-1 bg-blue-400 text-lg text-white font-semibold rounded hover:bg-blue-500
+}
+
+.btn-green{
+  @apply px-2 py-1 bg-green-400 text-white font-semibold rounded hover:bg-green-500
+}
