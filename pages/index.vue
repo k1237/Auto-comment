@@ -8,7 +8,8 @@
     </div>
     <div class="text-center border-t p-4 text-xl">
       <com-footer :Item="items"
-                  @add-event="addAction"/>
+                  @add-event="addAction"
+                  @del-event="deleteAction"/>
     </div>
   </div>
 </template>
@@ -44,7 +45,11 @@ export default defineComponent({
        chat.scrollTop = chat.scrollHeight;
     };
 
-    return{data,addAction}
+    const deleteAction =():void => {
+      data.comments = [];
+    }
+
+    return{data,addAction,deleteAction }
   },
 })
 </script>

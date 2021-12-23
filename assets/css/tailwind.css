@@ -13,3 +13,7 @@
 .btn-green{
   @apply px-2 py-1 bg-green-400 text-white font-semibold rounded hover:bg-green-500
 }
+
+.btn-yellow{
+  @apply px-2 py-1 bg-yellow-400 text-white font-semibold rounded hover:bg-yellow-500
+}
