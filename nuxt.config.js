@@ -14,7 +14,9 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'preconnect', href: "https://fonts.googleapis.com"},
+      { rel: 'stylesheet', href: "https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" }
     ]
   },
 
@@ -50,14 +52,6 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  },
-  
-  publicRuntimeConfig: {
-    apiUrl: API_URL,
-    apiKey: process.env.NODE_ENV !== 'production' ? API_KEY : undefined
-  },
-  privateRuntimeConfig: {
-    apiKey: API_KEY,
   },
 
 }

@@ -1,6 +1,5 @@
 <template>
-  <div class="flex border-b">
-    <h1>〇：</h1>
+  <div class="flex border-b p-2">
     <p>{{Comment}}</p>
   </div>
 </template>

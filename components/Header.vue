@@ -2,9 +2,12 @@
 <template>
   <div class="bg-purple-600 text-gray-50 h-20 pt-4">
     <div class="wrapper flex justify-between m-auto">
-      <h1 class="text-4xl">ストサポ</h1>
+      <div class="text-center">
+      <h1 class="fuchidori text-4xl dot-font">ストサポ</h1>
+      <p class="fuchidori text-sm dot-font">配信者支援サイト</p>
+      </div>
       <nav class="list-none">
-        <li class="mt-6"><a>自動コメント生成</a></li>
+        <li class="mt-6 fuchidori dot-font"><a>オートチャット</a></li>
       </nav>
     </div>
   </div>
