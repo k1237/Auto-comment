@@ -17,6 +17,8 @@
     >
       遅め
     </button>
+
+    <div class="mt-4">
     <button
       id="by"
       class="btn-yellow box-shadow ml-2 fuchidori"
@@ -31,6 +33,8 @@
     >
       リセット
     </button>
+    </div>
+
   </div>
 </template>
 

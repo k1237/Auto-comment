@@ -2,7 +2,7 @@
   <div>
     <Header />
 
-    <div class="main wrapper m-auto">
+    <div class="w-11/12 md:w-9/12 m-auto">
       <Nuxt />
     </div>
 
@@ -17,15 +17,11 @@ html {
 }
 
 .wrapper {
-  width: 75%;
+  width: 80%;
 }
 
 .m-auto {
   margin: 0 auto;
-}
-
-.main {
-  height: 800px;
 }
 
 .fuchidori {
