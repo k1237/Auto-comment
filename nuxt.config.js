@@ -48,8 +48,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/google-gtag',
     {
-      id: process.env.GOOGLE_ANALYTICS_TRACKING_ID || 'dummy',
-      debug: true,
+      id:'G-EN803HBQCW',
     }
   ],
 
