@@ -50,7 +50,7 @@ export default {
   ],
 
   'google-gtag': {
-    id: 'G-1234567890', 
+    id:'G-EN803HBQCW', 
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
