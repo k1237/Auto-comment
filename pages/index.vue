@@ -3,7 +3,7 @@
     <div class="text-center border-b-2 p-4 text-xl">
       <h1 class="fuchidori dot-font">オートチャット</h1>
     </div>
-    <div id="chat" class="mt-2 text-lg h-600 h-fixed overflow-y-auto">
+    <div id="chat" class="mt-2 text-lg h-96 md:h-600 overflow-y-auto">
       <comment v-for="(comment, index) in data.comments" :key="index" :Comment="comment" />
     </div>
     <div class="text-center border-t p-6 text-xl">
