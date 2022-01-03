@@ -7,7 +7,9 @@
       <p class="fuchidori text-sm dot-font">配信者支援サイト</p>
       </div>
       <nav class="list-none">
+        <Nuxt-link to="/">
         <li class="mt-6 fuchidori dot-font"><a>オートチャット</a></li>
+        </Nuxt-link>
       </nav>
     </div>
   </div>
