@@ -40,6 +40,7 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxtjs/composition-api/module',
+    '@nuxtjs/dotenv'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -50,7 +51,7 @@ export default {
   ],
 
   'google-gtag': {
-    id:'G-EN803HBQCW', 
+    id:process.env.GOOGLE_ANALYTICS_TRACKING_ID, 
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
