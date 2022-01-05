@@ -20,7 +20,7 @@
 <script lang="ts">
 import axios from 'axios'
 import { defineComponent, reactive,onMounted } from '@vue/composition-api'
-let url = "https://auto-comment-65bf4-default-rtdb.firebaseio.com/.json"
+// const url = "https://auto-comment-65bf4-default-rtdb.firebaseio.com/.json"
 
 type DataType = {
   fire_data:any
@@ -46,7 +46,7 @@ export default defineComponent({
     }
 
     const getData= async() =>{
-      await axios.get(url).then((result)=>{
+      await axios.get('/.json').then((result)=>{
         data.fire_data = result.data;
       })
     }
