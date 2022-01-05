@@ -54,10 +54,16 @@ export default {
     id:process.env.GOOGLE_ANALYTICS_TRACKING_ID, 
   },
 
+  env: {
+    baseUrl: process.env.API_URL
+  },
+
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    // baseURL:process.env.API_URL,
+    baseURL:process.env.baseUrl,
   },
+
+ 
 
   // publicRuntimeConfig: {
   //   axios: {
