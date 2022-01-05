@@ -46,7 +46,7 @@ export default defineComponent({
     }
 
     const getData= async() =>{
-      await axios.get('').then((result)=>{
+      await axios.get('/.json').then((result)=>{
         data.fire_data = result.data;
         // console.log(axios.defaults.baseURL);
       })
