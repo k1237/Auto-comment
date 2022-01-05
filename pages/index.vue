@@ -46,7 +46,7 @@ export default defineComponent({
     }
 
     const getData= async() =>{
-      await axios.get(axios.defaults.baseURL).then((result)=>{
+      await axios.get('').then((result)=>{
         data.fire_data = result.data;
       })
     }
