@@ -29,7 +29,7 @@ import axios from '../plugins/axios'
 
 type DataType = {
   fireData: any
-  comments: any
+  comments: string[]
 }
 
 export default defineComponent({
