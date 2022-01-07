@@ -47,7 +47,7 @@ type DataType = {
 }
 
 type Props = {
-  item: any
+  item: string[]
 }
 
 export default defineComponent({

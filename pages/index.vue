@@ -28,14 +28,14 @@ import { defineComponent, reactive, onMounted } from '@vue/composition-api'
 import axios from '../plugins/axios'
 
 type DataType = {
-  fireData: any
+  fireData: object
   comments: string[]
 }
 
 export default defineComponent({
   setup() {
     const data = reactive<DataType>({
-      fireData: '',
+      fireData: null,
       comments: [],
     })
 
