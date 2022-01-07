@@ -52,7 +52,10 @@ type Props = {
 
 export default defineComponent({
   props: {
-    item: Array,
+    item:{
+      type:Array,
+      required: true
+    },
   },
 
   setup: (props: Props, context) => {
