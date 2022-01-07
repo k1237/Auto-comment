@@ -41,7 +41,7 @@ export default defineComponent({
 
     const addAction = (comment:string): void => {
       data.comments.push(comment)
-      const chat = document.getElementById('chat')
+      const chat: any = document.getElementById('chat')
       chat.scrollTop = chat.scrollHeight
     }
 
