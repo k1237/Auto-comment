@@ -4,10 +4,10 @@
       <h1 class="fuchidori dot-font">オートチャット</h1>
     </div>
     <div id="chat" class="mt-2 text-lg h-96 md:h-600 overflow-y-auto">
-      <comment v-for="(comment, index) in data.comments" :key="index" :Comment="comment" />
+      <com-main v-for="(comment, index) in data.comments" :key="index" :comment="comment" />
     </div>
     <div class="text-center border-t p-6 text-xl">
-      <com-footer :Item="data.fire_data"
+      <com-footer :item="data.fireData"
                   @add-event="addAction"
                   @del-event="deleteAction"/>
     </div>
@@ -18,11 +18,11 @@
 </template>
 
 <script lang="ts">
-import axios from '../plugins/axios'
 import { defineComponent, reactive,onMounted } from '@vue/composition-api'
+import axios from '../plugins/axios'
 
 type DataType = {
-  fire_data:any
+  fireData:any
   comments: any
 }
 
@@ -30,7 +30,7 @@ export default defineComponent({
 
   setup() {
     const data = reactive<DataType>({
-      fire_data:'',
+      fireData:'',
       comments: [],
     });
 
@@ -46,7 +46,7 @@ export default defineComponent({
 
     const getData= async() =>{
       await axios.get('/.json').then((result)=>{
-        data.fire_data = result.data;
+        data.fireData = result.data;
       })
     }
 

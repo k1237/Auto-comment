@@ -1,6 +1,6 @@
 <template>
   <div class="flex border-b p-2">
-    <p>{{Comment}}</p>
+    <p>{{comment}}</p>
   </div>
 </template>
 
@@ -9,7 +9,10 @@ import { defineComponent } from '@vue/composition-api'
 
 export default defineComponent({
     props:{
-        Comment:Object
+        comment:{
+          type:Object,
+          required:true
+        }
     }
 })
 </script>

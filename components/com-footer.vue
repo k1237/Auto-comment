@@ -47,12 +47,12 @@ type DataType = {
 }
 
 type Props = {
-  Item: any
+  item: any
 }
 
 export default defineComponent({
   props: {
-    Item: Array,
+    item: Array,
   },
 
   setup: (props: Props, context) => {
@@ -94,8 +94,8 @@ export default defineComponent({
       clearInterval(data.timer)
 
       data.timer = setInterval(() => {
-        const num = Math.floor(Math.random() * props.Item.length)
-        data.comment = props.Item[num]
+        const num = Math.floor(Math.random() * props.item.length)
+        data.comment = props.item[num]
         context.emit('add-event', data.comment)
       }, 1000)
     }
@@ -110,8 +110,8 @@ export default defineComponent({
       clearInterval(data.timer)
 
       data.timer = setInterval(() => {
-        const num = Math.floor(Math.random() * props.Item.length)
-        data.comment = props.Item[num]
+        const num = Math.floor(Math.random() * props.item.length)
+        data.comment = props.item[num]
         context.emit('add-event', data.comment)
       }, 10000)
     }
@@ -125,8 +125,8 @@ export default defineComponent({
 
       clearInterval(data.timer)
       data.timer = setInterval(() => {
-        const num = Math.floor(Math.random() * props.Item.length)
-        data.comment = props.Item[num]
+        const num = Math.floor(Math.random() * props.item.length)
+        data.comment = props.item[num]
         context.emit('add-event', data.comment)
       }, 20000)
     }
