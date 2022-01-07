@@ -87,14 +87,6 @@ export default defineComponent({
       br.classList.remove('none-shadow')
     }
 
-    const setTime = (time:number) :void =>{
-      setInterval(() => {
-        const num = Math.floor(Math.random() * props.item.length)
-        data.comment = props.item[num]
-        context.emit('add-event', data.comment)
-      }, time)
-    }
-
     const fastClick = (): void => {
       btninit()
 
@@ -104,7 +96,11 @@ export default defineComponent({
 
       clearInterval(data.timer)
 
-      data.timer = setTime(1000)
+      data.timer = setInterval(() => {
+        const num = Math.floor(Math.random() * props.item.length)
+        data.comment = props.item[num]
+        context.emit('add-event', data.comment)
+      }, 1000)
     }
 
     const usuallyClick = (): void => {
@@ -162,7 +158,6 @@ export default defineComponent({
     return {
       data,
       btninit,
-      setTime,
       fastClick,
       usuallyClick,
       slowClick,
