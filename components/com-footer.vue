@@ -54,6 +54,7 @@ export default defineComponent({
   props: {
     item:{
       type:Array,
+      default:()=>[]
       // required: true
     },
   },
