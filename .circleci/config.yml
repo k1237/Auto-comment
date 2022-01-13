@@ -1,40 +1,23 @@
 version: 2
-
+orbs:
+  node: circleci/node@3.0.0
 jobs:
-  ci:
+  build:
     docker:
-      - image: cimg/node:lts
+      - image: circleci/node
     steps:
       - checkout
-
-      - restore_cache:
-          keys:
-            - node-v1-{{ checksum "package-lock.json" }}
-
-      - run:
-          name: Install dependencies
-          command: npm ci
-
-      - save_cache:
-          key: node-v1-{{ checksum "package-lock.json" }}
-          paths:
-            - ~/.npm
-
-      - run:
-          name: Run linter
-          command: npm run lint
-
-      - run:
-          name: Run tests
-          command: npm run test
+      # ビルド
+      - run: npm build
+      # cliからNetlifyにデプロイできるようにするライブラリをインストール
+      - run: npm install netlify-cli
+      # デプロイコマンド
+      - run: npm netlify deploy -p -d wonderful-cray-9a9c1f -a auto_cm -s Bx2qmgrqfmNG
 
 workflows:
-  version: 2
-  ci:
+  test-build-deploy:
     jobs:
-      - ci:
+      - build
           filters:
             branches:
-              only:
-                - main
-                - master
+              only: master

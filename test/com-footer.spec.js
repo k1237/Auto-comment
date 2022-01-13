@@ -1,7 +1,5 @@
-//自分でテストする項目を決め(最低限)CircleCIでデプロイ時にテストするようにする
-//値の代入等はTypescriptでカバーできない箇所をテストする
-//フロントバックそれぞれ別のテストが存在
-//空白時エラーをはくようにできないのか
+//typescriptを使用する場合は別途設定が必要
+  //警告がでる(Invalid handler for event "click": got undefined)
 
 import { mount } from '@vue/test-utils'
 import { shallowMount } from '@vue/test-utils'
@@ -14,17 +12,18 @@ describe('Footer.vue', () => {
     expect(wrapper.exists()).toBe(true)
   })
   
-  //他の型が代入できてしまう
   test('Propsテスト', function () {
     const wrapper = mount(Footer, {
       propsData: {
-        item: ['1', '2'],
+        item: ['test1', 'test2','test3'],
       },
     })
-    expect(wrapper.vm.$props.item).toEqual(['1', '2'])
+    expect(wrapper.vm.$props.item).toEqual(['test1', 'test2','test3'])
   })
+ 
 
   test('クリック時にイベントハンドラが実行される', async () => {
-    await wrapper.find('button').trigger('click')
+    const wrapper = mount(Footer)
+    await wrapper.find('#bp').trigger('fastClick')
   })
 })
