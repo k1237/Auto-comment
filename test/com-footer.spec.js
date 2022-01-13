@@ -1,5 +1,4 @@
 // typescriptを使用する場合は別途設定が必要
-// 警告がでる(Invalid handler for event "click": got undefined)
 
 import { mount } from '@vue/test-utils'
 import { shallowMount } from '@vue/test-utils'
