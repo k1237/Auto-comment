@@ -1,19 +1,19 @@
 <template>
   <div class="dot-font text-lg">
-    <button id="bp" class="btn-pink box-shadow fuchidori " @click="fastClick">
+    <button id="bp" class="btn-pink box-shadow fuchidori " @click="fastClick()">
       速め
     </button>
     <button
       id="bg"
       class="btn-green box-shadow ml-2 fuchidori"
-      @click="usuallyClick"
+      @click="usuallyClick()"
     >
       普通
     </button>
     <button
       id="bb"
       class="btn-blue box-shadow ml-2 fuchidori"
-      @click="slowClick"
+      @click="slowClick()"
     >
       遅め
     </button>
@@ -22,14 +22,14 @@
     <button
       id="by"
       class="btn-yellow box-shadow ml-2 fuchidori"
-      @click="stopClick"
+      @click="stopClick()"
     >
       ストップ
     </button>
     <button
       id="br"
       class="btn-red box-shadow ml-2 fuchidori"
-      @click="resetClick"
+      @click="resetClick()"
     >
       リセット
     </button>
