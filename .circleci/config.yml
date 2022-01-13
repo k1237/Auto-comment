@@ -16,6 +16,8 @@ jobs:
       - run: npm netlify deploy -p -d wonderful-cray-9a9c1f -a auto_cm -s Bx2qmgrqfmNG
 
 workflows:
+  version: 2
+
   test-build-deploy:
     jobs:
       - build:
