@@ -3,20 +3,20 @@
 import { mount } from '@vue/test-utils'
 import { createLocalVue,shallowMount } from '@vue/test-utils'
 import VueCompositionApi from '@vue/composition-api'
-import cfComponent from '../components/com-footer.vue'
+import comfooter from '../components/comfooter.vue'
 
 const localVue = createLocalVue()
 localVue.use(VueCompositionApi)
 
 describe('Footer.vue', () => {
-  const wrapper = shallowMount(cfComponent)
+  const wrapper = shallowMount(comfooter)
 
   test('コンポーネントが存在するか', () => {
     expect(wrapper.exists()).toBe(true)
   })
   
   test('Propsテスト', function () {
-    const wrapper = mount(cfComponent, {
+    const wrapper = mount(comfooter, {
       propsData: {
         item: ['test1', 'test2','test3'],
       },
@@ -26,15 +26,15 @@ describe('Footer.vue', () => {
  
   test('クリック時にイベントが実行される', () => {
 
-    wrapper.find('#bp').trigger('click');
+    // wrapper.find('#bp').trigger('click');
 
 
-    // const mock = jest.fn()
+    const mock = jest.fn()
 
     // wrapper.setMethods({fastClick:mock,})
 
-    // wrapper.find('#bp').trigger('click');
+    wrapper.find('#bp').trigger('click');
 
-    // expect(mock).toHaveBeenCalled()
+    expect(mock).toHaveBeenCalled()
   })
 })
