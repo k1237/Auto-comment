@@ -26,7 +26,7 @@ describe('Footer.vue', () => {
  
   //  TypeError: _vm.fastClick is not a function
   //  クリック後にemitされたかを検証したい
-  test('クリック時にイベントハンドラが実行される', async () => {
+  test('クリック時にイベントハンドラが実行される', () => {
     wrapper.find('button').trigger('click');
   })
 })
