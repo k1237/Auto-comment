@@ -51,8 +51,8 @@ type Props = {
 }
 
 export default defineComponent({
-  name: 'cf_Component',
-  
+  name: 'cfComponent',
+
   props: {
     item:{
       type:Array,

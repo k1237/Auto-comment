@@ -3,13 +3,13 @@
 import { mount } from '@vue/test-utils'
 import { createLocalVue,shallowMount } from '@vue/test-utils'
 import VueCompositionApi from '@vue/composition-api'
-import cf_Component from '../components/com-footer.vue'
+import cfComponent from '../components/com-footer.vue'
 
 const localVue = createLocalVue()
 localVue.use(VueCompositionApi)
 
 describe('Footer.vue', () => {
-  const wrapper = shallowMount(cf_Component)
+  const wrapper = shallowMount(cfComponent)
 
   test('コンポーネントが存在するか', () => {
     expect(wrapper.exists()).toBe(true)
