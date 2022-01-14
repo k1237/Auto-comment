@@ -5,8 +5,8 @@ import { createLocalVue,shallowMount } from '@vue/test-utils'
 import VueCompositionApi from '@vue/composition-api'
 import Footer from '../components/com-footer.vue'
 
-// const localVue = createLocalVue()
-// localVue.use(VueCompositionApi)
+const localVue = createLocalVue()
+localVue.use(VueCompositionApi)
 
 describe('Footer.vue', () => {
   const wrapper = shallowMount(Footer)
