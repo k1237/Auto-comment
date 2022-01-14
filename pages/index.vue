@@ -11,7 +11,7 @@
       />
     </div>
     <div class="text-center border-t p-6 text-xl">
-      <comfooter
+      <com-footer
         :item="data.fireData"
         @add-event="addAction"
         @del-event="deleteAction"
