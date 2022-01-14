@@ -16,7 +16,7 @@ describe('Footer.vue', () => {
   })
   
   test('Propsテスト', function () {
-    const wrapper = mount(cf_Component, {
+    const wrapper = mount(cfComponent, {
       propsData: {
         item: ['test1', 'test2','test3'],
       },
