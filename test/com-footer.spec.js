@@ -3,20 +3,20 @@
 import { mount } from '@vue/test-utils'
 import { createLocalVue,shallowMount } from '@vue/test-utils'
 import VueCompositionApi from '@vue/composition-api'
-import Footer from '../components/com-footer.vue'
+import cf_Component from '../components/com-footer.vue'
 
 const localVue = createLocalVue()
 localVue.use(VueCompositionApi)
 
 describe('Footer.vue', () => {
-  const wrapper = shallowMount(Footer)
+  const wrapper = shallowMount(cf_Component)
 
   test('コンポーネントが存在するか', () => {
     expect(wrapper.exists()).toBe(true)
   })
   
   test('Propsテスト', function () {
-    const wrapper = mount(Footer, {
+    const wrapper = mount(cf_Component, {
       propsData: {
         item: ['test1', 'test2','test3'],
       },
@@ -24,9 +24,17 @@ describe('Footer.vue', () => {
     expect(wrapper.vm.$props.item).toEqual(['test1', 'test2','test3'])
   })
  
-  //  TypeError: _vm.fastClick is not a function
-  //  クリック後にemitされたかを検証したい
-  test('クリック時にイベントハンドラが実行される', () => {
-    wrapper.find('button').trigger('click');
+  test('クリック時にイベントが実行される', () => {
+
+    wrapper.find('#bp').trigger('click');
+
+
+    // const mock = jest.fn()
+
+    // wrapper.setMethods({fastClick:mock,})
+
+    // wrapper.find('#bp').trigger('click');
+
+    // expect(mock).toHaveBeenCalled()
   })
 })
