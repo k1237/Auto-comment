@@ -14,7 +14,14 @@ describe('Footer.vue', () => {
   test('コンポーネントが存在するか', () => {
     expect(wrapper.exists()).toBe(true)
   })
+
+
+  test('dataの更新ができるか', () => {
+    wrapper.vm.comment = 'TEST'
+    expect(wrapper.vm.comment).toEqual('TEST')
+  })
   
+
   test('Propsテスト', function () {
     const wrapper = mount(comfooter, {
       propsData: {
@@ -24,10 +31,10 @@ describe('Footer.vue', () => {
     expect(wrapper.vm.$props.item).toEqual(['test1', 'test2','test3'])
   })
  
+
   test('クリック時にイベントが実行される', () => {
 
     // wrapper.find('#bp').trigger('click');
-
 
     // const mock = jest.fn()
 
@@ -37,4 +44,5 @@ describe('Footer.vue', () => {
 
     // expect(mock).toHaveBeenCalled()
   })
+
 })

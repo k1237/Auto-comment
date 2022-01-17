@@ -11,7 +11,8 @@ export default defineComponent({
     props:{
         comment:{
           type:Object,
-          required:true,
+          default:()=>{},
+          // required:true,
         }
     }
 })
