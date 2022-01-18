@@ -2,7 +2,7 @@ import { mount } from '@vue/test-utils'
 import { shallowMount } from '@vue/test-utils'
 import commain from '../components/com-main.vue'
 
-describe('Footer.vue', () => {
+describe('com-main.vue', () => {
   const wrapper = shallowMount(commain)
 
   test('コンポーネントが存在するか', () => {

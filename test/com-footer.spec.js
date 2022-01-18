@@ -1,5 +1,5 @@
 // typescriptを使用する場合は別途設定が必要
-
+// import {jest} from '@jest/globals'
 import { mount } from '@vue/test-utils'
 import { createLocalVue,shallowMount } from '@vue/test-utils'
 import VueCompositionApi from '@vue/composition-api'
@@ -8,7 +8,7 @@ import comfooter from '../components/com-footer.vue'
 const localVue = createLocalVue()
 localVue.use(VueCompositionApi)
 
-describe('Footer.vue', () => {
+describe('com-footer.vue', () => {
   const wrapper = shallowMount(comfooter)
 
   test('コンポーネントが存在するか', () => {
@@ -38,7 +38,7 @@ describe('Footer.vue', () => {
 
     // const mock = jest.fn()
 
-    // wrapper.setMethods({fastClick:mock,})
+    // // wrapper.setMethods({fastClick:mock,})
 
     // wrapper.find('#bp').trigger('click');
 
